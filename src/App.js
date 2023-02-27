@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Navigation } from './Components';
+import { Navigation, RequireAuth } from './Components';
 import { Home, About, Services, NotFound, Signin, Signup } from './Pages';
 const App = () => {
   return (
@@ -9,7 +9,15 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
+
+        <Route path="/services" element={
+          
+          <RequireAuth>
+            <Services />
+          </RequireAuth>
+
+        } />
+
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<NotFound />} />

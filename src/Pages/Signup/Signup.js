@@ -29,8 +29,8 @@ const Signup = () => {
                 <Container>
                     <Row>
                         <Col lg={6} className='offset-lg-3'>
-                            <h1>Sign up</h1>
-                            <p className='text-muted mb-4'>Create an account.</p>
+                            <h1 className='text-start display-3 mt-5'>Sign Up</h1>
+                            <p className='mb-4 text-muted'>Create an account.</p>
                                                    
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
